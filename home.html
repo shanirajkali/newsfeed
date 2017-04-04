@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="userHome.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+
+	html {
+    font-family: "Lucida Sans", sans-serif;
+}
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0px;
+			background-color: #D3D3D3;
+
+
+		}
+		.container{
+
+		}
+		.row::after{
+			content: "";
+			clear: both;
+			display: table;
+		
+
+		}
+		[class*="col-"]{
+			padding: 0px;
+			
+				}
+			.col-1 {width: 8.33%;}
+        	.col-2 {width: 16.66%;}
+         	.col-3 {width: 25%;}
+        	.col-4 {width: 33.33%;}
+        	.col-5 {width: 41.66%;}
+        	.col-6 {width: 50%;}
+          	.col-7 {width: 58.33%;}
+			.col-8 {width: 66.66%;}
+			.col-9 {width: 75%;}
+			.col-10 {width: 83.33%;}
+			.col-11 {width: 91.66%;}
+			.col-12 {width: 100%;}
+		
+		.button {
+				
+   			 	background-color: #4CAF50; /* Green */
+ 				border-radius: 5px;
+ 				padding: 2px 0px;
+  				text-decoration: none;
+  				text-align: center;
+  				margin:1px 2px;
+    			font-size: 20px;
+    			height: 30px;
+    			display: inline;
+				}
+			.nfButton{
+				background-color: black;
+				color: white;
+				text-decoration: none;
+				text-align: center;
+				
+				height: 40px;
+				font-size: 20px;
+				border-radius: 20px;
+				padding: 2px 0px;
+			
+				margin-bottom: 0px;
+
+
+			}	
+			#postedBy{
+				color: green;
+			}
+		.header{
+			height: 56px;
+			float: right;
+			overflow: hidden;
+			background-color: white;
+			border-radius: 10px;
+			border: 1px solid #D3D3D3;
+		}
+		#profile{
+			float: right;
+		}
+		
+		.hiddendivright{
+			float: left;
+			background-color: #D3D3D3;
+			height: 400px;
+		
+		}
+		.hiddendivleft{
+			float: left;
+			background-color: #D3D3D3;
+			height: 400px;
+
+		}
+		.middel{
+			height: 660px;
+			overflow: scroll;
+			padding: 14px;
+			border-radius: 14px;
+			float: left;
+			background-color: #D3D3D3;
+			overflow-x:hidden;
+			border: 1px solid #D3D3D3;
+		}
+		h1.headeritem{
+			color: #D3D3D3;
+			font-size: 20px;
+		}
+
+		li:hover{
+			color: black;
+			font-size: 15px;
+			font-color:white;
+		}
+		ul{
+			list-style-type: none;
+			margin:0;
+			padding: 0;
+			background-color: #f3f3f3;
+			overflow: hidden;
+			border: 1px solid #e7e7e7;
+
+		}
+		#home{
+			float: left;
+		}
+		ul{
+			background-color: black;
+			font-color:white;
+		}
+		li a{
+			display: block;
+			width: 120px;
+			color: white;
+
+			text-decoration: none;
+			font-color:white;
+			padding: 20px 16px;
+			background-color: black;
+			text-align: center;
+			height: 60px;
+			font-size: 15px;
+		}
+		li a:hover{
+			background-color: #555;
+			color: white;
+			font-size: 20px;
+			font-color:white;
+		}
+		.news{
+			background-color: #D3D3D3;
+			margin: 7px;
+			position: relative;
+			float: left;
+			overflow: auto;
+			border-radius: 8px;
+			border:1px solid white;
+			padding: 8px;
+
+
+		}
+		.news:hover{
+			font-size: 20px;
+			border:.5px solid blue;
+			background-color: white;
+			 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+		.newsType{
+			font-size: 12px;
+			color: blue;
+		}
+			@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+
+    }
+            .col-2 {width: 0%;}
+            .col-8{width: 100%}
+}
+		
+
+	</style>
+</head>
+<body>
+<div id="" class="row">
+	<div class="col-12 header">
+		<ul>
+			<li><a href="#home" id="home" onclick="allNews()">Home</a></li>
+			<li><a href="#home" id="home" onclick="localNews()">Local</a></li>
+			<li><a href="#home" id="home" onclick="technicalNews()">Technical</a></li>
+			<li><a href="#home" id="home" onclick="businessNews()">Business</a></li>
+			<li><a href="#home" id="home" onclick="healthNews()">Health</a></li>
+		</ul>
+	</div>
+
+<div class="col-12 container">
+	<div class="col-2 hiddendivleft">
+	</div>
+	<div class="col-8 middel" id="showNews"></div>
+	<div class="col-2 hiddendivright">
+		
+	</div>
+</div>
+
+<div id="" class="row">
+	<div></div>
+</div>
+</div>
+</body>
+<script type="text/javascript">window.onload=allNews();</script>
+</html>

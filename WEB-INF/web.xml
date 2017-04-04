@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+  http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+	 <servlet>
+    	<description></description>
+    	<servlet-name>address</servlet-name>
+    	<servlet-class>Address</servlet-class><!-- this is our servlet class our code class file-->
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>address</servlet-name>
+    	<url-pattern>/address</url-pattern><!--this is that url shows on browser -->
+</servlet-mapping>
+ 
+ <servlet>
+      <description></description>
+      <servlet-name>merchantSignup</servlet-name>
+      <servlet-class>MerchantSignup</servlet-class><!-- this is our servlet class our code class file-->
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>merchantSignup</servlet-name>
+      <url-pattern>/merchantSignup</url-pattern><!--this is that url shows on browser -->
+</servlet-mapping>
+
+ <servlet>
+      <description></description>
+      <servlet-name>merchantLogin</servlet-name>
+      <servlet-class>MerchantLogin</servlet-class><!-- this is our servlet class our code class file-->
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>merchantLogin</servlet-name>
+      <url-pattern>/merchantLogin</url-pattern><!--this is that url shows on browser -->
+</servlet-mapping>
+
+<servlet>
+      <description></description>
+      <servlet-name>newsPost</servlet-name>
+      <servlet-class>NewsPost</servlet-class><!-- this is our servlet class our code class file-->
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>newsPost</servlet-name>
+      <url-pattern>/newsPost</url-pattern><!--this is that url shows on browser -->
+</servlet-mapping>
+
+<servlet>
+      <description></description>
+      <servlet-name>merchantLogout</servlet-name>
+      <servlet-class>MerchantLogout</servlet-class><!-- this is our servlet class our code class file-->
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>merchantLogout</servlet-name>
+      <url-pattern>/merchantLogout</url-pattern><!--this is that url shows on browser -->
+</servlet-mapping>
+
+<servlet>
+      <description></description>
+      <servlet-name>getNews</servlet-name>
+      <servlet-class>GetNews</servlet-class><!-- this is our servlet class our code class file-->
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>getNews</servlet-name>
+      <url-pattern>/getNews</url-pattern><!--this is that url shows on browser -->
+</servlet-mapping>
+
+<servlet>
+      <description></description>
+      <servlet-name>mSup</servlet-name>
+      <servlet-class>MSup</servlet-class><!-- this is our servlet class our code class file-->
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>mSup</servlet-name>
+      <url-pattern>/mSup</url-pattern><!--this is that url shows on browser -->
+</servlet-mapping>
+
+</web-app>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<form>
+	<input id="name" placeholder="Name" type="text" name="name" required><br>
+	<select id="gender" class="form-control" name="gender">
+		<option value="male" selected>Male</option>
+		<option value="female">Female</option>
+		<option value="other">Other</option>
+	</select><br>
+	<input id="email" placeholder="Email" type="text" name="email" required><br>
+	<input id="phone" name="phone" placeholder="Phone Number" type="number"  required><br>
+
+
+	<textarea id="address" name="address" type="textarea"  rows="3" cols="20" placeholder="Address line"></textarea><br>
+	<input id="dob"  type="date" name="date_of_birth"><br>
+	<input id="password"  placeholder="Password" type="password" name="password" required><br>
+	<p id="error" class=""><a href="">Submit carefully</a></p>
+</form>
+<h2 id="n"></h2>
+<h2 id="e"></h2>
+<h2 id="p"></h2>
+<button id="button" onclick="sup()">Submit</button>
+</div>
+<script type="text/javascript">
+	function sup() {
+		var name=document.getElementById('name').value;
+	var gender=document.getElementById('gender').value;
+	var email=document.getElementById('email').value;
+	var phone=document.getElementById('phone').value;
+	var address=document.getElementById('address').value;
+	var dob=document.getElementById('dob').value;
+	var password=document.getElementById('password').value;
+	var signupData='{"name":"'+name+'","gender":"'+gender+'","email":"'
+					+email+'","phone":"'+phone+'","address":"'+address+'","dob":"'+dob+'","password":"'+password+'"}';
+					console.log(signupData);
+					var xhttp=new XMLHttpRequest();
+					xhttp.open("POST","mSup",true);
+   					xhttp.send(signupData);
+					xhttp.onreadystatechange=function(){
+					if(xhttp.readyState==4){
+						if(xhttp.status == 200){
+							console.log(xhttp.responseText);
+							var response=JSON.parse(xhttp.responseText);
+							var flag=parseInt(response.flag);
+							if(flag==1){
+								document.getElementById('error').innerHTML="submitted";
+								$("#name").hide();
+								$("#gender").hide();
+								$("#email").hide();
+								$("#phone").hide();
+								$("#address").hide();
+								$("#dob").hide();
+								$("#password").hide();
+								$("#button").hide();
+								$("#n").show();
+								$("#e").show();
+								$("#p").show();
+								document.getElementById("n").innerHTML=response.name;
+								document.getElementById("e").innerHTML=response.email;
+								document.getElementById("p").innerHTML=response.phone;
+								success(response.name,response.email,response.phone);
+					}
+					else{
+				document.getElementById('error').innerHTML="wrong";
+				}		
+		}
+		else if(xhttp.status == 500){
+		console.log("server problem");	
+		}
+
+	}
+};
+
+	}
+	function ol(){
+		$("#n").hide();
+		$("#e").hide();
+		$("#p").hide();
+	}
+	function success(name,email,phone){
+
+	}
+window.onload=ol();
+</script>
+<h1 id="println"></h1>
+</body>
+</html>
