@@ -102,4 +102,3 @@ function logout(){
 	};
 	return status;
 }
-function cookie(){}
